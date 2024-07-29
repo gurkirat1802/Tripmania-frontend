@@ -9,7 +9,7 @@ const Userdashboard = () => {
     useEffect(() => {
         const fetchTrips = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/v1/viewtrip');
+                const response = await fetch('https://tripmania-backend.onrender.com/api/v1/viewtrip');
                 if (response.ok) {
                     const data = await response.json();
                     setTrips(data.data);
