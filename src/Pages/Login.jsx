@@ -21,7 +21,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/login', formData);
+      const response = await axios.post('https://tripmania-backend.onrender.com/api/v1/login', formData);
       console.log(response.data); 
       navigate("/user/dashboard");
       alert("Login successful");
