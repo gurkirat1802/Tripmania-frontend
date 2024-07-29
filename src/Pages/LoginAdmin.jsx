@@ -20,7 +20,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/api/v1/loginadmin', formData); // Make POST request to login endpoint
+            const response = await axios.post('https://tripmania-backend.onrender.com/api/v1/loginadmin', formData); // Make POST request to login endpoint
             console.log(response.data); // Log response from the server
             // Handle successful login here (e.g., redirect user to dashboard)
             navigate("/adminDashboard")
