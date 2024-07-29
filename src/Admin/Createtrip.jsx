@@ -20,7 +20,7 @@ const Createtrip = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3000/api/v1/createtrip', {
+            const response = await fetch('https://tripmania-backend.onrender.com/api/v1/createtrip', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
