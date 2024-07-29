@@ -17,7 +17,7 @@ const Update = () => {
     useEffect(() => {
         const fetchTripData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/v1/viewtrip/${id}`);
+                const response = await fetch(`https://tripmania-backend.onrender.com/api/v1/viewtrip/${id}`);
                 if (response.ok) {
                     const data = await response.json();
                     setTripData(data.data);
@@ -46,7 +46,7 @@ const Update = () => {
         e.preventDefault(); // Prevent default form submission
 
         try {
-            const response = await fetch(`http://localhost:3000/api/v1/updatetrip/${id}`, {
+            const response = await fetch(`https://tripmania-backend.onrender.com/api/v1/updatetrip/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
