@@ -10,7 +10,7 @@ const ViewtripDetail = () => {
     useEffect(() => {
         const fetchTrip = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/v1/viewtrip/${id}`);
+                const response = await fetch(`https://tripmania-backend.onrender.com/api/v1/viewtrip/${id}`);
                 if (response.ok) {
                     const data = await response.json();
                     setTrip(data.data);
