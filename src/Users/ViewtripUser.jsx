@@ -13,7 +13,7 @@ const ViewtripUser = () => {
     useEffect(() => {
         const fetchTrip = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/v1/viewtripuser/${id}`);
+                const response = await fetch(`https://tripmania-backend.onrender.com/api/v1/viewtripuser/${id}`);
                 if (response.ok) {
                     const data = await response.json();
                     setTrip(data.data);
@@ -43,7 +43,7 @@ const ViewtripUser = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:3000/api/v1/addcomment/${id}`, {
+            const response = await fetch(`https://tripmania-backend.onrender.com/api/v1/addcomment/${id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
