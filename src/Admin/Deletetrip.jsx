@@ -11,7 +11,7 @@ const Deletetrip = () => {
     useEffect(() => {
         const fetchTrips = async () => {
             try {
-                const response = await fetch('http://localhost:3000/api/v1/viewtrip');
+                const response = await fetch('https://tripmania-backend.onrender.com/api/v1/viewtrip');
                 if (response.ok) {
                     const data = await response.json();
                     setTrips(data.data);
@@ -30,7 +30,7 @@ const Deletetrip = () => {
 
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3000/api/v1/deletetrip/${id}`, {
+            const response = await fetch(`https://tripmania-backend.onrender.com/api/v1/deletetrip/${id}`, {
                 method: 'DELETE',
             });
 
